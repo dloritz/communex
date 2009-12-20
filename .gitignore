@@ -1,0 +1,8 @@
+*.clj
+*.bak
+*.jar
+junk*
+/classes/
+/temp/
+/junk/
+old/

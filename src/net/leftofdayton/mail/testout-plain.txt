@@ -1,0 +1,27 @@
+To: news2@leftofdayton.net
+From: don@leftofdayton.net
+Subject: Plain text
+Content-Type: multipart/alternative;
+    boundary="-------news@leftofdayton1257632324502"
+
+This is a multi-part message in MIME format.
+-------news@leftofdayton1257632324502
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+
+Posted by don at email server @leftofdayton.net
+
+
+test
+
+-------news@leftofdayton1257632324502
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><body><p>(Posted by <i>don</i> at email server <i>@leftofdayton.net)
+</i></p><input type='hidden' name='newsid' value='1257632324502'/>
+test
+</body></html>
+
+-------news@leftofdayton1257632324502==
