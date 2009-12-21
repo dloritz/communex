@@ -8,6 +8,8 @@
     (:require tlc)
     )
 
+;load other tlc libs...
+
 (refer 'tlc) ;tlc2
 
 (def mail-folder
@@ -61,9 +63,6 @@
 (defn new-boundary []
    (str "------" (now) "leftofdayton.net")
    )
-
-             ]
-             ]
 
 (defn go []
   (eval (list 'binding (apply vector *b-list)

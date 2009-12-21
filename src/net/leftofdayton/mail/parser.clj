@@ -4,19 +4,19 @@
    (set! *html
          (str "<html><body>"
               *plain
-              </body></html>
+              "</body></html>"
               ) )
    )
 
 (defn pemit [ & l$]
-  (set! *plain (str plain (apply str l$)))
+  (set! *plain (str *plain (apply str l$)))
   )
 
 (defn html-gettag [b]
-   (let [ a (ss *html$ \< b)
-          sp (ss *html$ \ a)
-          b (ss *html$ \> a)
-          tag$ (and b (substr *html$ (inc a) (if sp (dec sp) (dec b))))
+   (let [ a (ss *html \< b)
+          sp (ss *html \  a)
+          b (ss *html \>  a)
+          tag$ (and b (substr *html (inc a) (if sp (dec sp) (dec b))))
           ]
         (and tag$
              (trim-punc (substr tag$ 1))
@@ -87,9 +87,9 @@
               )
         (if *plain
             (plain-to-html)
-            (in-xrl-env (str \ *html)
+            (in-xrl-env (str \  *html)
                     (set! *plain "")
-                    (html-to-plain)
+                    (html-to-*plain)
                     )
             )
         ) )
@@ -150,9 +150,10 @@
 
 
 (defn parse [f$]
+
      (binding [*nl* *nl*]
         (def *m$ (slurp (str mail-folder "Inbox/" f$)))
-        (set! plain$ "")
+        (set! *plain "")
         (def *i 0)
         (if (ss *m$ "Content-Type: multipart")
             (set-multipart)

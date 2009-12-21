@@ -7,7 +7,7 @@ call :setup
 
 call textpad %srcpath%\main.clj
 
-echo.
+echo. 
 echo.
 call git status
 echo.
